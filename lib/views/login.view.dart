@@ -13,7 +13,6 @@ class LoginView extends StatefulWidget {
 class _LoginViewState extends State<LoginView> {
   late final LocalAuthentication auth;
   late bool _supportState = false;
-
   @override
   void initState() {
     super.initState();
@@ -21,6 +20,7 @@ class _LoginViewState extends State<LoginView> {
     auth.isDeviceSupported().then((bool isSupported) => setState(() {
           _supportState = isSupported;
         }));
+    
   }
 
   @override
